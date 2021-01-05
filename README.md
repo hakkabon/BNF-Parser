@@ -11,14 +11,14 @@ Production   : Identifier ':' Expression ';' ;
 Expression   : Term { "|" Term } ;
 Term         : Factor { Factor } ;
 Factor       : Identifier
-                            | Literal
-                            | "[" Expression "]"
-                            | "(" Expression ")"
-                            | "{" Expression "}"
-                            | "{:" CODE_STRING ":}" ;
-Identifier    : letter { letter | "_" | "-" } ;
-Literal       : """" character { character } """"
-                            | "'" character { character } "'" ;
+             | Literal
+             | "[" Expression "]"
+             | "(" Expression ")"
+             | "{" Expression "}"
+             | "{:" CODE_STRING ":}" ;
+Identifier   : letter { letter | "_" | "-" } ;
+Literal      : """" character { character } """"
+             | "'" character { character } "'" ;
 ```
 The alphabet of the `Literal` is currently limited to ASCII characters.
 This grammar definition is very close to the BNF grammar definition given

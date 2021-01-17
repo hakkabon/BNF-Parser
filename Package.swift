@@ -12,7 +12,7 @@ let package = Package(
     dependencies: [
         .package(name: "Files", url: "https://github.com/johnsundell/files.git", from: "2.2.1"),
         .package(url: "https://github.com/apple/swift-argument-parser", from: "0.3.0"),
-        .package(name: "Tokenizer", url: "https://github.com/hakkabon/tokenizer", from: "1.0.2"),
+        .package(name: "Tokenizer", url: "https://github.com/hakkabon/tokenizer", from: "1.0.3"),
     ],
     targets: [
         .target(name: "BNF", dependencies: ["Tokenizer","Files"]),

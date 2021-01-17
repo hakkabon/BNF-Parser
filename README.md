@@ -38,8 +38,20 @@ tokens {
     id : "[a-zA-Z]+"
 }
 productions {
-    E     : E '+' T | T ;
-    T     : T '*' F | F ;
-    F     : '(' E ')' | 'id' ;
+    E  : E '+' T | T ;
+    T  : T '*' F | F ;
+    F  : '(' E ')' | 'id' ;
 }
 ```
+## Install using Swift PM
+Use the Swift Package Manager that is included in Xcode 8.0 and all subsequent releases. Add a new dependency to your 
+project or add a dependency to your `PackageDescription` file referencing the `Grammar` module as shown below. 
+  
+```swift
+dependencies: [
+    .package(name: "BNF", url: "https://github.com/hakkabon/BNF-Parser", from: "1.0.1"),
+],
+```
+
+## License
+MIT
